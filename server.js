@@ -6,20 +6,18 @@ const fs = require('fs');
 const serv = http.createServer((req, res) => {
 
 	res.writeHead(200,{'content-Type': 'text/html'});
-	res.write("");
-	fs.readFile('./hd.html',null, (error , data) => {
+	fs.readFile('./h.html',null, (error , data) => {
 		if(error){
-			res.write(""+error);
+			res.write("an error was occurated : "+error);
 			res.end();
 
 		}else{
-
 			res.write(data);
-			
+			res.end();
 		}
 		res.end();
 	});
-
+	res.end();
 });
 
 serv.listen(port , host , () => {
