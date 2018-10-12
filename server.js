@@ -20,8 +20,12 @@ const serv = http.createServer((req, res) => {
 	res.end();
 });
 
-serv.listen(port , host , () => {
-
-	console.log(`server started http://${host}:${port}`);
+serv.listen(port , host , (error) => {
+	
+	if(error){
+		console.log('an error was occurated while lanching the server');
+	}else{
+	console.log(`server started at http://${host}:${port}`);
+	}
 
 });
