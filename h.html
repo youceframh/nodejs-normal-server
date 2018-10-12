@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Node js page</title>
+</head>
+<body>
+	<h1>this is from Html</h1>
+	
+	<input type="text" id="num1">
+	<input type="text" id="num2">
+	<input type="submit" id="sub" onclick="sum();">
+	<select>
+		<option value="1">Plus</option>
+		<option value="2">devide</option>
+		<option value="3">X</option>
+	</select>
+	<script>
+		
+
+		function sum() {
+			var num1 = Number(document.getElementById('num1').value);
+		var num2 = Number(document.getElementById('num2').value);
+	var operator = Number(document.getElementsByTagName('select')[0].value);
+			switch (operator) {
+				case 1 :
+				document.write(num1+num2);
+				break;
+
+				case 2 :
+				document.write(num1/num2);
+				break;
+
+				case 3 :
+				document.write(num1*num2);
+				break;
+
+			}
+
+		}
+	</script>
+
+</body>
+</html>
