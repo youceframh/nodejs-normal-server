@@ -6,7 +6,7 @@ const fs = require('fs');
 const serv = http.createServer((req, res) => {
 
 	res.writeHead(200,{'content-Type': 'text/html'});
-	fs.readFile('./h.html',null, (error , data) => {
+	fs.readFile('./index.html',null, (error , data) => {
 		if(error){
 			res.write("an error was occurated : "+error);
 			res.end();
